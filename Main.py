@@ -1,5 +1,3 @@
-import math
-
 import PySimpleGUI as sg
 from Resposta import Calcular
 
@@ -9,10 +7,9 @@ def Inicial():
     #Tela antes da criação das imagens
     sg.change_look_and_feel('DarkBlue3')
     layout = [
-        [sg.Text('Tipo de circuito:')],
         [sg.Text('Amplitude do Fasor:', size=(22, 0)),
          sg.Input(key='A', size=(10, 0))],
-        [sg.Text('Angulo do Fasor:', size=(22, 0)), sg.Input(key='ang', size=(10, 0))],
+        [sg.Text('Ângulo do Fasor(Graus):', size=(22, 0)), sg.Input(key='ang', size=(10, 0))],
         [sg.Button('Calcular', size=(10, 0))]
     ]
     return sg.Window('Circuitos 1 - UFC', layout=layout, finalize=True)
@@ -22,11 +19,10 @@ def Com_imagem():
     #Tela após ter criado a primeira imagem
     sg.change_look_and_feel('DarkBlue3')
     layout = [
-        [sg.Text('Tipo de circuito:')],
         [sg.Image('grafico.png')],
         [sg.Text('Amplitude do Fasor:', size=(52, 0)),
          sg.Input(key='A', size=(10, 0))],
-        [sg.Text('Angulo do Fasor:', size=(52, 0)), sg.Input(key='ang', size=(10, 0))],
+        [sg.Text('Ângulo do Fasor(Graus):', size=(52, 0)), sg.Input(key='ang', size=(10, 0))],
         [sg.Button('Calcular', size=(10, 0))]
     ]
     return sg.Window('Circuitos 1 - UFC', layout=layout, finalize=True)
